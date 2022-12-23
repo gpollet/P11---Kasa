@@ -1,0 +1,7 @@
+@forward "./404";
+@forward "./about";
+@forward "./fiche-logement";
+@forward "./home";
+
+@use "../variables";
+@use "../mixins"
