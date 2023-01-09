@@ -1,9 +1,11 @@
 import React from 'react';
+import SectionTopBanner from '../components/SectionTopBanner';
 
 const About = () => {
   return (
     <div>
-      <p>A propos</p>
+      <SectionTopBanner />
+      {/*<p>A propos</p>*/}
     </div>
   );
 };

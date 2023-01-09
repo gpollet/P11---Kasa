@@ -3,14 +3,19 @@ import App from "./App"
 import About from "./pages/About"
 import Error from "./pages/Error"
 import Home from "./pages/Home"
-import Logements from "./pages/Logements"
+import logementsData from "./api/logements.json"
+import Logement from "./pages/Logement"
 
 const router = createBrowserRouter([
   {
     element: <App />,
     children: [
       { path: "/", element: <Home /> },
-      { path: "/logements", element: <Logements /> },
+      {
+        element: <Logement />,
+        path: "/:logementId",
+        loader: logementsData.id,
+      },
       { path: "/about", element: <About /> },
       { path: "/*", element: <Error /> },
     ],

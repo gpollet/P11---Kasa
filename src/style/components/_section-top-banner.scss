@@ -1,0 +1,21 @@
+@use "../mixins" as mixin;
+
+.top-section-banner {
+  @include mixin.gradient-overlay;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 5%;
+
+  & img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+  }
+
+  & figure {
+    position: absolute;
+    color: white;
+    font-size: 48px;
+    line-height: 68px;
+  }
+}

@@ -1,0 +1,34 @@
+@use "../mixins" as mixin;
+
+.dropdown- {
+  &title {
+    @include mixin.whitetext-on-redbackground;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 26px;
+    padding: 15px 1em;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  &content {
+    background-color: #f6f6f6;
+    height: 100%;
+    & ul,
+    p {
+      margin-top: 0;
+      padding: 1em 0 0 1em;
+      list-style: none;
+      line-height: 26px;
+    }
+  }
+  &hidden {
+    display: none;
+  }
+  &visible {
+    display: block;
+  }
+  &chevron {
+    height: 100%;
+  }
+}

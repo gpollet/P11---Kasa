@@ -1,11 +1,13 @@
-import React from 'react';
+import React from "react"
+import { Link } from "react-router-dom"
 
-const Thumb = ({logement}) => {
+const Thumb = ({ logement }) => {
   return (
-    <div className='thumb'>
-      <figure>{logement.name}</figure>
-    </div>
-  );
-};
+    <Link to={logement.id} className="thumb" >
+      <img src={logement.cover} alt={logement.title} />
+      <figure>{logement.title}</figure>
+    </Link>
+  )
+}
 
-export default Thumb;
+export default Thumb
