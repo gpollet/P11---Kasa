@@ -1,0 +1,22 @@
+header,
+main {
+  margin: 3em 5em;
+}
+
+body {
+  font-family: Montserrat, Arial, Helvetica, sans-serif;
+}
+
+// Keeps the footer at the bottom of pages
+html,
+body {
+  height: 100%;
+  & #root {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+  }
+  & main {
+    flex: 1 0 auto;
+  }
+}

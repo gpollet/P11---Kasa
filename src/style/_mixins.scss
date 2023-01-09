@@ -1,0 +1,6 @@
+@use "./variables" as var;
+
+@mixin whitetext-on-redbackground {
+  color: white;
+  background-color: var.$main-color;
+}

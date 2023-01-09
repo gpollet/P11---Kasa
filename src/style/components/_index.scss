@@ -1,3 +1,8 @@
-//@forward "./";
+@forward "./header";
+@forward "./footer";
+@forward "./dropdown";
+@forward "./tag";
+@forward "./thumb";
+
 @use "../variables";
 @use "../mixins"
