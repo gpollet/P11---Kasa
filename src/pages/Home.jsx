@@ -1,11 +1,15 @@
-import React from 'react';
+import React from "react"
+import Thumb from "../components/Thumb"
+import logements from "../api/logements.json"
 
 const Home = () => {
+  const createCards = logements.map((logement) => (
+    <Thumb key={logement.id} logement={{ name: logement.title }} />
+  ))
   return (
     <>
-      <p>Page d'accueil</p>
+      <div className="cards-list">{createCards}</div>
     </>
-  );
-};
-
-export default Home;
+  )
+}
+export default Home
