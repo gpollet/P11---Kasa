@@ -1,11 +1,8 @@
-import React from 'react';
+import React from "react"
 
-const Carousel = () => {
-  return (
-    <div className='carousel'>
-      
-    </div>
-  );
-};
+const Carousel = ({ carouselData }) => {
+  //console.log(carouselData)
+  return <img className="carousel" src={carouselData.pictures[0]} alt={carouselData.title} />
+}
 
-export default Carousel;
+export default Carousel

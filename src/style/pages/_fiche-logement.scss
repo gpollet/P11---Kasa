@@ -1,0 +1,56 @@
+.logement-top-info {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 15px;
+  & h1 {
+    margin-top: 8px;
+  }
+}
+
+.tagList {
+  display: flex;
+  gap: 15px;
+}
+
+.host- {
+  &presentation {
+    display: flex;
+    text-align: right;
+    font-size: 18px;
+    height: 100%;
+    width: 15%;
+    margin-top: 0;
+  }
+
+  &portrait {
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+    margin-left: 15px;
+  }
+
+  &rating {
+    width: 15%;
+  }
+}
+
+.tags-and-rating {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.rating-stars {
+  height: 30px;
+  width: 30px;
+  padding-left: 10px;
+}
+
+.logement-dropdown {
+  display: flex;
+  justify-content: space-between;
+  & .dropdown {
+    flex-basis: 45%;
+    margin: 1em 0;
+  }
+}
