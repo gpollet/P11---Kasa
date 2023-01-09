@@ -4,7 +4,7 @@ import logements from "../api/logements.json"
 
 const Home = () => {
   const createCards = logements.map((logement) => (
-    <Thumb key={logement.id} logement={{ name: logement.title }} />
+    <Thumb key={logement.id} logement={logement} />
   ))
   return (
     <>
