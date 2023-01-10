@@ -1,5 +1,11 @@
+@use "../mixins" as mixin;
+
 .about-dropdowns {
   & .dropdown {
     margin: 2em 10em;
+
+    @include mixin.mobile-screen {
+      margin: 1em 0;
+    }
   }
 }

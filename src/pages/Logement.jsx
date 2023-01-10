@@ -48,31 +48,32 @@ const Logement = () => {
 
   return (
     <>
-    {/* If there is data, display the page. Otherwise, display error page */}
+      {/* If there is data, display the page. Otherwise, display error page */}
       {logementData ? (
         <>
           <Carousel carouselData={logementData} />
 
-          <div className="logement-top-info">
-            <div>
-              <h1>{logementData.title}</h1>
-              <h2>{logementData.location}</h2>
+          <div className="logement-top-container">
+            <div className="title-and-tags">
+              <div>
+                <h1>{logementData.title}</h1>
+                <h2>{logementData.location}</h2>
+              </div>
+              <div className="tagList">{logementTags()}</div>
             </div>
-            <div className="host-presentation">
-              <p>{logementData.host.name}</p>
-              <img
-                className="host-portrait"
-                src={logementData.host.picture}
-                alt={"Photo de " + logementData.host.name}
-              />
-            </div>
-          </div>
-
-          <div className="tags-and-rating">
-            <div className="tagList">{logementTags()}</div>
-            <div className="host-rating">
-              {logementRatingStars()}
-              {logementRatingToFive()}
+            <div className="host-and-rating">
+              <div className="host-presentation">
+                <p>{logementData.host.name}</p>
+                <img
+                  className="host-portrait"
+                  src={logementData.host.picture}
+                  alt={"Photo de " + logementData.host.name}
+                />
+              </div>
+              <div className="host-rating">
+                {logementRatingStars()}
+                {logementRatingToFive()}
+              </div>
             </div>
           </div>
 

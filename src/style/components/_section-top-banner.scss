@@ -10,6 +10,10 @@
     width: 100%;
     height: 100%;
     border-radius: 10px;
+    object-fit: cover;
+    @include mixin.mobile-screen {
+      height: 8em;
+    }
   }
 
   & figure {
@@ -17,5 +21,12 @@
     color: white;
     font-size: 48px;
     line-height: 68px;
+    @include mixin.mobile-screen {
+      font-size: 24px;
+      line-height: 24px;
+      width: 65%;
+      left: 0;
+      margin-left: 1em;
+    }
   }
 }

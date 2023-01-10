@@ -1,4 +1,5 @@
 @use "../variables" as var;
+@use "../mixins" as mixin;
 
 .error-page {
   height: 100%;
@@ -11,15 +12,25 @@
     font-size: 288px;
     font-weight: 700;
     margin: 0;
+
+    @include mixin.mobile-screen {
+      font-size: 96px;
+    }
   }
 
   & h2 {
     font-size: 36px;
     font-weight: 500;
     margin-bottom: 6em;
+    @include mixin.mobile-screen {
+      font-size: 18px;
+    }
   }
 
   & a {
     color: var.$main-color;
+    @include mixin.mobile-screen {
+      font-size: 14px;
+    }
   }
 }

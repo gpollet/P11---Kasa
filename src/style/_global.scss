@@ -1,9 +1,13 @@
 @use "./variables" as var;
+@use "./mixins" as mixin;
 
 
 header,
 main {
   margin: 3em 5em;
+  @include mixin.mobile-screen {
+    margin: 1em;
+  }
   color: var.$main-color;
 }
 
