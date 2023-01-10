@@ -9,7 +9,7 @@ const Logement = () => {
   // Retrieves data for the current home based on the url
   let location = useLocation()
   const logementData = logements.find((logement) => "/" + logement.id === location.pathname)
-  console.log(logementData)
+  //console.log(logementData)
 
   const logementTags = logementData.tags.map((tag) => <Tag tagName={tag} key={tag} />)
 

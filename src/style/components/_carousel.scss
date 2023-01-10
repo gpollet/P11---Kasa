@@ -4,3 +4,24 @@
   object-fit: cover;
   border-radius: 25px;
 }
+
+.carousel-container {
+  width: 100%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.carousel-left-panel, .carousel-right-panel {
+  position: absolute;
+  margin: 0 1em;
+
+  & img {
+    cursor: pointer;
+  }
+}
+
+.carousel-right-panel {
+  right: 0;
+}
