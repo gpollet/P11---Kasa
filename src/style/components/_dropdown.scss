@@ -13,13 +13,14 @@
   }
   &content {
     background-color: #f6f6f6;
+    border-radius: 0 0 10px 10px;
     height: 100%;
-    & ul,
-    p {
-      margin-top: 0;
-      padding: 1em 0 0 1em;
+    padding: 1em;
+    line-height: 26px;
+    margin-top: 0;
+    & ul {
       list-style: none;
-      line-height: 26px;
+      padding-left: 0;
     }
   }
   &hidden {
