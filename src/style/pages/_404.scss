@@ -1,0 +1,25 @@
+@use "../variables" as var;
+
+.error-page {
+  height: 100%;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  flex-direction: column;
+
+  & h1 {
+    font-size: 288px;
+    font-weight: 700;
+    margin: 0;
+  }
+
+  & h2 {
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 6em;
+  }
+
+  & a {
+    color: var.$main-color;
+  }
+}
