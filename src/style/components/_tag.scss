@@ -12,4 +12,11 @@
   height: 25px;
   padding: 0 15px;
   cursor: default;
+
+  @include mixin.mobile-screen {
+    font-size: 10px;
+    min-width: 84px;
+    height: 18px;
+    padding: 0 5px;
+  }
 }

@@ -18,3 +18,9 @@
     border-radius: 10px;
   }
 }
+
+@mixin mobile-screen {
+  @media (max-width: 1024px) {
+    @content;
+  }
+}

@@ -10,6 +10,12 @@
     padding: 15px 1em;
     border-radius: 10px;
     cursor: pointer;
+
+    @include mixin.mobile-screen {
+      font-size: 13px;
+      line-height: 19px;
+      padding: 5px 1em;
+    }
   }
   &content {
     background-color: #f6f6f6;
@@ -18,6 +24,13 @@
     padding: 1em;
     line-height: 26px;
     margin-top: 0;
+
+    @include mixin.mobile-screen {
+      font-size: 12px;
+      padding-bottom: 0;
+      padding-top: 0.3em;
+    }
+
     & ul {
       list-style: none;
       padding-left: 0;
@@ -31,5 +44,9 @@
   }
   &chevron {
     height: 100%;
+
+    @include mixin.mobile-screen {
+      height: 13px;
+    }
   }
 }

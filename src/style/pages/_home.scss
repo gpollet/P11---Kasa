@@ -1,3 +1,5 @@
+@use "../mixins" as mixin;
+
 .cards-list {
   display: flex;
   flex-wrap: wrap;
@@ -6,4 +8,7 @@
   border-radius: 25px;
   padding: 5%;
   padding-bottom: 0;
+  @include mixin.mobile-screen {
+    padding: 0;
+  }
 }
