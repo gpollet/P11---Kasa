@@ -16,41 +16,53 @@ const Carousel = ({ carouselData }) => {
   }
   const createCarousel = (
     <div className="carousel-container">
-      <div
-        className="carousel-left-panel"
-        onClick={() => {
-          manageCarouselPictures(-1)
-        }}
-        onKeyDown={(event) => {
-          if (event.key === " " || event.key === "Enter") {
+      {carouselData.pictures.length > 1 ? (
+        <div
+          className="carousel-left-panel"
+          onClick={() => {
             manageCarouselPictures(-1)
-          }
-        }}
-        tabIndex={0}
-        aria-label="Previous picture"
-      >
-        <img src="/images/icons/arrow-left.png" alt="Left arrow" />
-      </div>
+          }}
+          onKeyDown={(event) => {
+            if (event.key === " " || event.key === "Enter") {
+              manageCarouselPictures(-1)
+            }
+          }}
+          tabIndex={0}
+          aria-label="Previous picture"
+        >
+          <img src="/images/icons/arrow-left.png" alt="Left arrow" />
+        </div>
+      ) : (
+        ""
+      )}
+
       <img
         className="carousel"
         src={carouselData.pictures[displayedPicture]}
         alt={carouselData.title}
       />
-      <div
-        className="carousel-right-panel"
-        onClick={() => {
-          manageCarouselPictures(+1)
-        }}
-        onKeyDown={(event) => {
-          if (event.key === " " || event.key === "Enter") {
+      {carouselData.pictures.length > 1 ? (
+        <span className="carousel-counter">{displayedPicture+1}/{carouselData.pictures.length}</span>
+      ):""}
+      {carouselData.pictures.length > 1 ? (
+        <div
+          className="carousel-right-panel"
+          onClick={() => {
             manageCarouselPictures(+1)
-          }
-        }}
-        tabIndex={0}
-        aria-label="Next picture"
-      >
-        <img src="/images/icons/arrow-right.png" alt="Right arrow" />
-      </div>
+          }}
+          onKeyDown={(event) => {
+            if (event.key === " " || event.key === "Enter") {
+              manageCarouselPictures(+1)
+            }
+          }}
+          tabIndex={0}
+          aria-label="Next picture"
+        >
+          <img src="/images/icons/arrow-right.png" alt="Right arrow" />
+        </div>
+      ) : (
+        ""
+      )}
     </div>
   )
   return createCarousel

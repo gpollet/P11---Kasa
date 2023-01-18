@@ -11,12 +11,15 @@ const SectionTopBanner = () => {
       banner.url += "home"
       banner.textContent = "Chez vous, partout et ailleurs"
     } else if (location.pathname === "/about") {
-      banner.url += "about"
+      if (window.innerWidth < 426) {
+        banner.url += "about-m"
+      } else {
+        banner.url += "about"
+      }
     }
     banner.url += "-top-banner.jpg"
     return banner
   }
-
   return (
     <div className="top-section-banner">
       <img src={topBanners().url} alt="Bannière section" />

@@ -34,3 +34,14 @@
 .carousel-right-panel {
   right: 0;
 }
+
+.carousel-counter {
+  position: absolute;
+  color: white;
+  font-size: 18px;
+  left: 50%;
+  bottom: 5%;
+  @include mixin.mobile-screen {
+    display: none;
+  }
+}
